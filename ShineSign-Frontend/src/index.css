@@ -11,3 +11,18 @@ html {
 body {
 	font-size: 1.6rem;
 }
+
+.editor-page {
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+
+.editor {
+	min-height: 90dvh;
+	width: 100% !important;
+}
+
+.pdf-page {
+	width: 21cm;
+	height: 29.7cm;
+}

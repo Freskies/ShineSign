@@ -10,6 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emmetio/expand-abbreviation": "^0.7.3",
+    "@monaco-editor/react": "^4.7.0",
+    "emmet-monaco-es": "^5.5.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0"
