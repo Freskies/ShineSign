@@ -1,0 +1,13 @@
+body {
+	background-color: gray;
+	display: grid;
+	place-content: center;
+	overflow: hidden;
+}
+
+.document {
+	width: 21cm;
+	height: 29.7cm;
+	overflow: hidden;
+	background-color: #fff;
+}

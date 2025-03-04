@@ -3,6 +3,15 @@ import jsPDF from "jspdf";
 import { useRef } from "react";
 import { Editor } from "@monaco-editor/react";
 import { emmetHTML, emmetCSS } from "emmet-monaco-es";
+import minifiedStylePDF from "./minifiedStylePDF.js";
+import SplitPane from "./SplitPane/SplitPane.jsx";
+
+function getDocument (content = "") {
+	return `<html>
+			<head><style>${minifiedStylePDF}</style></head>
+			<body><div class="document">${content}</div></body>
+		</html>`;
+}
 
 export default function App () {
 	const page = useRef(null);
@@ -22,13 +31,14 @@ export default function App () {
 	}
 
 	// display the code in the iframe
-	function display (content = "") {
+	function display (content) {
 		if (!page.current) return;
-		page.current.srcdoc = `<html><body>${content}</body></html>`;
+		page.current.srcdoc = getDocument(content);
 	}
 
-	return <div className="editor-page">
-		<Editor
+	return <SplitPane
+		className="editor-page"
+		leftPane={<Editor
 			ref={editor}
 			className="editor"
 			defaultLanguage="html"
@@ -42,8 +52,8 @@ export default function App () {
 				minimap: { enabled: false },
 			}}
 			onMount={handleEditorMount}
-		/>
-		<iframe className="pdf-page" ref={page}></iframe>
-	</div>;
-
+		/>}
+		rightPane={<iframe className="pdf-page" ref={page} srcDoc={getDocument()}></iframe>}
+		toDisableRefs={[page]}
+	/>;
 };
