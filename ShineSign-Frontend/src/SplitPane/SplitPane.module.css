@@ -10,6 +10,7 @@
 	background-color: gray;
 	cursor: col-resize;
 	position: relative;
+	z-index: 100;
 }
 
 .resizer::before {
@@ -20,4 +21,14 @@
 	left: -5px;
 	right: -5px;
 	background: transparent;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	height: 100dvh;
+	background: transparent;
+	z-index: 9999;
 }

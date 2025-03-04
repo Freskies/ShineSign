@@ -54,6 +54,5 @@ export default function App () {
 			onMount={handleEditorMount}
 		/>}
 		rightPane={<iframe className="pdf-page" ref={page} srcDoc={getDocument()}></iframe>}
-		toDisableRefs={[page]}
 	/>;
 };
