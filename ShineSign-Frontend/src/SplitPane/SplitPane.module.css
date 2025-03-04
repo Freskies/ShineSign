@@ -1,0 +1,23 @@
+.splitPane {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 100%;
+	width: 100%;
+}
+
+.resizer {
+	width: 1px;
+	background-color: gray;
+	cursor: col-resize;
+	position: relative;
+}
+
+.resizer::before {
+	content: '';
+	position: absolute;
+	top: -10px;
+	bottom: -10px;
+	left: -5px;
+	right: -5px;
+	background: transparent;
+}
