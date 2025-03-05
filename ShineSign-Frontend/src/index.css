@@ -13,12 +13,3 @@ body {
 	height: 100dvh;
 	overflow: hidden;
 }
-
-.editor {
-	height: 100dvh;
-}
-
-.pdf-page {
-	height: 100%;
-	width: 100%;
-}
