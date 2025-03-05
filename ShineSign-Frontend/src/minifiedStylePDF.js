@@ -1,2 +1,0 @@
-//https://www.toptal.com/developers/cssminifier
-export default ".document,body{overflow:hidden}body{background-color:gray;display:grid;place-content:center}.document{width:21cm;height:29.7cm;background-color:#fff}";
